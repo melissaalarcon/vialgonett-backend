@@ -34,13 +34,13 @@ footer{
   background: #3E64FF;
   padding: 4%;
   height: 140px;
-  /*clear: both;*/
+  clear: both;
   text-align: center;
   color: aliceblue;
   font-family: 'Raleway', sans-serif;
-  /*position: fixed; */
-  /*bottom: 0;*/
-  /*width: 100%;*/
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
 .myContainer{
@@ -59,4 +59,8 @@ h3 {
 .errorAutenticacion{
   color: rgb(206, 42, 13);
   font-weight: 500;
+}
+
+.btn {
+  color:#ffffff;
 }
