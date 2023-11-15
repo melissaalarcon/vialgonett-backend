@@ -65,7 +65,14 @@ h3 {
   color:#ffffff;
 }
 
-h5 {
+.helloWorld {
+  padding: 10px;
+}
+
+h4 { 
   font-family: 'Raleway', sans-serif;
-  color: rgb(206, 42, 13);
+}
+
+.nuevoBoton {
+  margin-right: 10px;
 }

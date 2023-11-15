@@ -27,7 +27,7 @@ async function deleteServicioById(id) {
 async function getServicioById(id) {
     var query = "select * from servicios where id=?"
     var rows = await pool.query(query, [id]);
-    return rows[0];
+    return rows;
 }
 
 async function modificarServicioById (obj, id) {

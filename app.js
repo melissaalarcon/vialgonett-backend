@@ -35,6 +35,7 @@ app.use(session({
 
 secured = async(req, res, next) => {
     try {
+      console.log("Middleware Secured:", req.url);
       console.log(req.session.id_user);
       if(req.session.id_user) {
         next();

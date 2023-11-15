@@ -47,7 +47,8 @@ router.get('/eliminar/:id', async (req, res, next) => {
 });
 
 router.get('/modificar/:id', async (req, res, next) => {
-    let id = req.params.id;
+    var id = req.params.id;
+    console.log("URL recibida:", req.url);
     console.log(req.params.id);
     
     var servicio = await serviciosModel.getServicioById(id);
