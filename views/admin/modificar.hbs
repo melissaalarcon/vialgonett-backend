@@ -1,0 +1,23 @@
+<div class="container" style="margin:100px auto">
+    <div class="row">
+        <div class="col-6 offset-3">
+            <h4>Modificar el servicio</h4>
+            <form action="/admin/servicios/modificar" method="post">
+                <input type="hidden" value="{{novedad.id}}" name="id">
+                <div class="mb-3 row">
+                    <input type="text" class="form-control" placeholder="Titulo" name="titulo" value="{{novedad.titulo}}">
+                </div>
+                <div class="mb-3 row">
+                    <input type="text" class="form-control" placeholder="Subtitulo" name="subtitulo" value="{{novedad.subtitulo}}">
+                </div>
+                <div class="mb-3 row">
+                    <textarea type="text" class="form-control" placeholder="Contenido" name="cuerpo">{{novedad.cuerpo}}</textarea>
+                </div>
+                <button type="submit" class="btn btn-info">Guardar</button>
+                {{#if error}}
+                    <p class="errorAutenticacion">{{message}}</p>
+                {{/if}}
+            </form>
+        </div>
+    </div>
+</div>

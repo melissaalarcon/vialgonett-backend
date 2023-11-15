@@ -1,8 +1,8 @@
 <div class="container" style="margin:100px auto">
     <div class="row">
         <div class="col-6 offset-3">
-            <h4>Agregar una nueva novedad</h4>
-            <form action="/admin/novedades/agregar" method="post">
+            <h4>Agregar un nuevo servicio</h4>
+            <form action="/admin/servicios/agregar" method="post">
                 <div class="mb-3 row">
                     <input type="text" class="form-control" placeholder="Titulo" name="titulo">
                 </div>
@@ -14,7 +14,7 @@
                 </div>
                 <button type="submit" class="btn btn-info">Guardar</button>
                 {{#if error}}
-                    <h5>{{message}}</h5>
+                    <p class="errorAutenticacion">{{message}}</p>
                 {{/if}}
             </form>
         </div>

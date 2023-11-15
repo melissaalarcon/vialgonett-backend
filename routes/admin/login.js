@@ -27,7 +27,7 @@ router.post('/', async (req, res, next) => {
             req.session.name = data.user;
             // id y user del registro en la bd, con la que debemos conectar en las variables de sesion
 
-            res.redirect('/admin/novedades');
+            res.redirect('/admin/servicios');
         } else {
             res.render('admin/login', { // el error que experimentaba era porque la ruta estaba asi '/admin/login'. cuidado con las rutas !!
                 layout: 'admin/layout',

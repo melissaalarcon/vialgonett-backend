@@ -5,10 +5,10 @@
     </div>
         <div class="row">
             <div class="col-7">
-                <h4>Listado de Novedades</h4>
+                <h4>Listado de Nuevos Servicios</h4>
             </div>
             <div class="col-5 text-end">
-                <a class="btn" href="/admin/novedades/agregar"><i class="fa fa-plus" aria-hidden="true">Nuevo</i></a>
+                <a class="btn" href="/admin/servicios/agregar"><i class="fa fa-plus" aria-hidden="true">Nuevo</i></a>
             </div>
         </div>
     <div class="row">
@@ -22,13 +22,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {{#each novedades}} {{!- MUY IMPORTANTE DISTINGUIR MAYUSCULAS DE MINUSCULAS, o el codigo no va a funcionar. Mismo cuando se conectan con elementos de BD}}
+                    {{#each servicios}} {{!- MUY IMPORTANTE DISTINGUIR MAYUSCULAS DE MINUSCULAS, o el codigo no va a funcionar. Mismo cuando se conectan con elementos de BD}}
                     <tr>
                         <th scope="row">{{id}}</th>
                         <td>{{{titulo}}}</td>
                         <td class="text-end">
-                            <a class="btn" href=""><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                            <a class="btn" href=""><i class="fa fa-trash" aria-hidden="true"></i></a>
+                            <a class="btn" href="/admin/servicios/modificar{{id}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                            <a class="btn" href="/admin/servicios/eliminar/{{id}}"><i class="fa fa-trash" aria-hidden="true"></i></a>
                         </td>
                     </tr>
                     {{/each}}
