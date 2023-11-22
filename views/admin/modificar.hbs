@@ -2,16 +2,25 @@
     <div class="row">
         <div class="col-6 offset-3">
             <h4>Modificar el servicio</h4>
-            <form action="admin/servicios/modificar" method="post">
-                <input type="hidden" value="{{novedad.id}}" name="id">
+            <form action="/admin/servicios/modificar" method="post" enctype="multipart/form-data">
+                <input type="hidden" value="{{servicio.id}}" name="id">
                 <div class="mb-3 row">
-                    <input type="text" class="form-control" placeholder="Titulo" name="titulo" value="{{novedad.titulo}}">
+                    <input type="text" class="form-control" placeholder="Titulo" name="titulo" value="{{servicio.titulo}}">
                 </div>
                 <div class="mb-3 row">
-                    <input type="text" class="form-control" placeholder="Subtitulo" name="subtitulo" value="{{novedad.subtitulo}}">
+                    <input type="text" class="form-control" placeholder="Subtitulo" name="subtitulo" value="{{servicio.subtitulo}}">
                 </div>
                 <div class="mb-3 row">
-                    <textarea type="text" class="form-control" placeholder="Contenido" name="cuerpo">{{novedad.cuerpo}}</textarea>
+                    <textarea type="text" class="form-control" placeholder="Contenido" name="cuerpo">{{servicio.cuerpo}}</textarea>
+                </div>
+                <div class="mb-3 row">
+                    <p>
+                        <label>Imagen: <input type="file" class="form-control" name="imagen" id="imagen"/></label>
+                    </p>
+                    <p>
+                        <label><input type="checkbox" name="img_delete" id="img_delete" value="1">¿Eliminar imagen actual?</label>
+                        <input type="hidden" name="img_original" value="{{servicio.img_id}}">
+                    </p>
                 </div>
                 <button type="submit" class="btn btn-info">Guardar</button>
                 {{#if error}}

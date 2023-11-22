@@ -27,7 +27,7 @@ async function deleteServicioById(id) {
 async function getServicioById(id) {
     var query = "select * from servicios where id=?"
     var rows = await pool.query(query, [id]);
-    return rows;
+    return rows[0];
 }
 
 async function modificarServicioById (obj, id) {
@@ -37,7 +37,7 @@ async function modificarServicioById (obj, id) {
         return rows;
         
     } catch (error) {
-    console.log("Error en modificarServicioById:", error);
+    console.log("Error en modificarServicioById", error);
     throw error;
     }
 }

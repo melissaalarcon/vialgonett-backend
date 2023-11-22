@@ -1,7 +1,7 @@
 
-<main class="holder-01">
-    <div class="container helloWorld" style="margin-top: 50px; margin-left: 650px; margin-bottom: 50px">
-        <h3>Hola, {{person}}! <a class="btn btn-info" href="/admin/login/logout">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a></h3>
+<main class="holder-01 container"> <! para una disposicion mas correcta de los divs, es conveniente poner la clase container en el main holder >
+    <div class="helloWorld" style="margin-top: 50px; margin-bottom: 50px; text-align: end">
+        <h3 style="text-align: end;">¡Hola, {{person}}! <a class="btn btn-info" href="/admin/login/logout">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a></h3>
     </div>
         <div class="row">
             <div class="col-7">
@@ -11,13 +11,14 @@
                 <a class="btn btn-info nuevoBoton" href="/admin/servicios/agregar"><i class="fa fa-plus" aria-hidden="true">Nuevo</i></a>
             </div>
         </div>
-    <div class="row">
-        <div class="col">
+    <div>
+        <div>
             <table class="table table-hover">
                 <thead>
                     <tr class="table-info">
                         <th scope="col">#</th>
                         <th scope="col">Titulo</th>
+                        <th scope="col">Imagen</th>
                         <th scope="text-end">Acciones</th>
                     </tr>
                 </thead>
@@ -26,8 +27,9 @@
                     <tr>
                         <th scope="row">{{id}}</th>
                         <td>{{{titulo}}}</td>
+                        <td>{{{imagen}}}</td>
                         <td class="text-end">
-                            <a class="btn" href="/admin/servicios/modificar{{id}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                            <a class="btn" href="/admin/servicios/modificar/{{id}}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                             <a class="btn" href="/admin/servicios/eliminar/{{id}}"><i class="fa fa-trash" aria-hidden="true"></i></a>
                         </td>
                     </tr>
