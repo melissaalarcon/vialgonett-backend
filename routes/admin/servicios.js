@@ -78,7 +78,7 @@ router.post('/agregar', async (req, res, next) => {
 router.get('/eliminar/:id', async (req, res, next) => {
     var id = req.params.id;
 
-    let servicio = await serviciosModelModel.getServicioById(id);
+    let servicio = await serviciosModel.getServicioById(id);
     if (servicio.img_id) {
         await (destroy(servicio.img_id));
     }
